@@ -1,4 +1,4 @@
-package uk.co.breadhub.testplugin.entities;
+package uk.co.breadhub.events.entities;
 
 
 public class Event {

@@ -1,4 +1,4 @@
-package uk.co.breadhub.testplugin;
+package uk.co.breadhub.events;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

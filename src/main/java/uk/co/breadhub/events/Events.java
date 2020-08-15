@@ -1,7 +1,7 @@
-package uk.co.breadhub.testplugin;
+package uk.co.breadhub.events;
 
 import org.bukkit.ChatColor;
-import uk.co.breadhub.testplugin.entities.Event;
+import uk.co.breadhub.events.entities.Event;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Events {
                 }
             }
         } else {
-            
+
         }
         return eventStarted;
     }

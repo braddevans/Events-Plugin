@@ -1,4 +1,4 @@
-package uk.co.breadhub.testplugin.utils;
+package uk.co.breadhub.events.utils;
 
 import org.bukkit.Statistic;
 import org.bukkit.entity.Player;

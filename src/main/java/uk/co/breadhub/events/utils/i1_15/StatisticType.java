@@ -1,4 +1,4 @@
-package uk.co.breadhub.testplugin.utils.i1_15;
+package uk.co.breadhub.events.utils.i1_15;
 
 // enum for 1.15 statistics
 public enum StatisticType {

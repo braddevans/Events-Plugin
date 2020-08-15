@@ -1,15 +1,10 @@
-package uk.co.breadhub.testplugin.listeners;
+package uk.co.breadhub.events.listeners;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import uk.co.breadhub.testplugin.Events;
-import uk.co.breadhub.testplugin.entities.Event;
-import uk.co.breadhub.testplugin.utils.MiscUtils;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import uk.co.breadhub.events.Events;
+import uk.co.breadhub.events.utils.MiscUtils;
 
 public class CommandListener implements CommandExecutor {
     @Override
