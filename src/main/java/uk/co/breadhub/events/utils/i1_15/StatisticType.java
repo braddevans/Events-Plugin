@@ -80,5 +80,15 @@ public enum StatisticType {
     RAID_TRIGGER,
     RAID_WIN,
     INTERACT_WITH_ANVIL,
-    INTERACT_WITH_GRINDSTONE
+    INTERACT_WITH_GRINDSTONE;
+
+    public static String getByKeyName(String namekey){
+        String name = "doesnotexist";
+        for (StatisticType value : values()) {
+            if (value.name().toLowerCase().equals(namekey.toLowerCase())){
+                name = value.name();
+            }
+        }
+        return name;
+    }
 }
