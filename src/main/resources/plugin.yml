@@ -1,0 +1,6 @@
+name: Testplugin
+version: @version@
+main: uk.co.breadhub.testplugin.Testplugin
+api-version: 1.15
+load: STARTUP
+authors: [slicedbread]

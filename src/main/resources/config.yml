@@ -1,0 +1,46 @@
+plugin:
+  debug: false
+
+# ================= #
+# statistic list [Note: they can be referred to by id's aswell]
+# ================= #
+#
+#  1 - DAMAGE_DEALT, 2 - DAMAGE_TAKEN, 3 - DEATHS, 4 - MOB_KILLS, 5 - PLAYER_KILLS,
+#  6 - FISH_CAUGHT, 7 - ANIMALS_BRED, 8 - LEAVE_GAME, 9 - JUMP, 10 - DROP_COUNT, 11 - DROP,
+#  12 - PICKUP, 13 - PLAY_ONE_MINUTE, 14 - WALK_ONE_CM, 15 - WALK_ON_WATER_ONE_CM,
+#  16 - FALL_ONE_CM, 17 - SNEAK_TIME, 18 - CLIMB_ONE_CM, 19 - FLY_ONE_CM, 20 - WALK_UNDER_WATER_ONE_CM,
+#  21 - MINECART_ONE_CM, 22 - BOAT_ONE_CM, 23 - PIG_ONE_CM, 24 - HORSE_ONE_CM, 25 - SPRINT_ONE_CM,
+#  26 - CROUCH_ONE_CM, 27 - AVIATE_ONE_CM, 28 - MINE_BLOCK, 29 - USE_ITEM, BREAK_ITEM, CRAFT_ITEM,
+#  KILL_ENTITY, ENTITY_KILLED_BY, TIME_SINCE_DEATH, TALKED_TO_VILLAGER,
+#  TRADED_WITH_VILLAGER, CAKE_SLICES_EATEN, CAULDRON_FILLED, CAULDRON_USED,
+#  ARMOR_CLEANED, BANNER_CLEANED, BREWINGSTAND_INTERACTION, BEACON_INTERACTION,
+#  DROPPER_INSPECTED, HOPPER_INSPECTED, DISPENSER_INSPECTED, NOTEBLOCK_PLAYED,
+#  NOTEBLOCK_TUNED, FLOWER_POTTED, TRAPPED_CHEST_TRIGGERED, ENDERCHEST_OPENED,
+#  ITEM_ENCHANTED, RECORD_PLAYED, FURNACE_INTERACTION, CRAFTING_TABLE_INTERACTION,
+#  CHEST_OPENED, SLEEP_IN_BED, SHULKER_BOX_OPENED, TIME_SINCE_REST, SWIM_ONE_CM,
+#  DAMAGE_DEALT_ABSORBED, DAMAGE_DEALT_RESISTED, DAMAGE_BLOCKED_BY_SHIELD, DAMAGE_ABSORBED,
+#  DAMAGE_RESISTED, CLEAN_SHULKER_BOX, OPEN_BARREL, INTERACT_WITH_BLAST_FURNACE,
+#  INTERACT_WITH_SMOKER, INTERACT_WITH_LECTERN, INTERACT_WITH_CAMPFIRE,
+#  INTERACT_WITH_CARTOGRAPHY_TABLE, INTERACT_WITH_LOOM, INTERACT_WITH_STONECUTTER,
+#  BELL_RING, RAID_TRIGGER, RAID_WIN, INTERACT_WITH_ANVIL, INTERACT_WITH_GRINDSTONE
+
+# ================= #
+# Events
+# ================= #
+
+## todo: scan through the events: and spawn scheduled events from it
+## todo: add the ability to make custom events and their times and rewards / commands / entities / location
+#Events:
+#  testEvent1:
+#    # ReOccuringTime can be removed if needed
+#    ReOccuringTime: 600
+#    # command on completion can be removed if needed
+#    commandsOnCompletion:
+#      - "give {player} diamond 1"
+#
+#    # location not needed
+#    location:
+#      x: 100
+#      y: 10
+#      z: 100
+#      world: "world"

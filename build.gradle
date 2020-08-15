@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+group = 'uk.co.breadhub'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'spigotmc-repo'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    compileOnly 'org.bukkit:bukkit:1.15.2-R0.1-SNAPSHOT'
+}
