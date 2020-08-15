@@ -40,8 +40,7 @@ public class DatabaseImpl {
 	}
 
 	public static void init() {
-		String sql = "CREATE TABLE IF NOT EXISTS `" + database + "`.`playerStatistics` ( " +
-				"`UUID` VARCHAR(64) NOT NULL ," + "" +
+		String sql = "CREATE TABLE IF NOT EXISTS Events.playerStatistics(UUID VARCHAR(64) NOT NULL ," + "" +
 				"DAMAGE_DEALT BIGINT(19) DEFAULT '0'," +
 				"DAMAGE_TAKEN BIGINT(19) DEFAULT '0'," +
 				"DEATHS BIGINT(19) DEFAULT '0'," +
