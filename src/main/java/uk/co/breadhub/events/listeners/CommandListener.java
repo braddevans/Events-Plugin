@@ -4,13 +4,18 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import uk.co.breadhub.events.Events;
+import uk.co.breadhub.events.Main;
 import uk.co.breadhub.events.utils.MiscUtils;
 
 public class CommandListener implements CommandExecutor {
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         switch (command.toString().toLowerCase()) {
-            case "events": {
+            case "event":
+            case "events":
+            case "eventadmin":
+            case "eventsadmin":{
                 switch (args[0].toLowerCase()) {
                     case "start": {
                         if (sender.hasPermission("events.admin") || sender.hasPermission("events.*")) {
@@ -28,6 +33,9 @@ public class CommandListener implements CommandExecutor {
                         sender.sendMessage(MiscUtils.toColorText("&6Active Events&7: &4[&2 " + Events.getActiveEvents().toString() +" &4]"));
                         break;
                     }
+                    default:
+                        sendHelpMessage(sender);
+                        break;
                 }
                 break;
             }

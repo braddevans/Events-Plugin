@@ -4,3 +4,10 @@ main: uk.co.breadhub.events.Main
 api-version: 1.15
 load: STARTUP
 authors: [slicedbread]
+
+commands:
+  events:
+    description: "Events Main Command"
+    aliases:
+      - "events"
+      - "eventsadmin"

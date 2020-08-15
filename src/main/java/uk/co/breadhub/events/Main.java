@@ -1,6 +1,7 @@
 package uk.co.breadhub.events;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import uk.co.breadhub.events.listeners.CommandListener;
 
 public final class Main extends JavaPlugin {
     public static Main instance;
@@ -28,6 +29,10 @@ public final class Main extends JavaPlugin {
         // register listeners
 
         // register commands
+        getCommand("events").setExecutor(new CommandListener());
+        getCommand("eventsadmin").setExecutor(new CommandListener());
+        getCommand("eventadmin").setExecutor(new CommandListener());
+        getCommand("event").setExecutor(new CommandListener());
 
 
         // pick a random event id from a list every x hours set in config
