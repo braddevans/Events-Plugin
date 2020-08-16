@@ -1,9 +1,11 @@
 package uk.co.breadhub.events;
 
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import uk.co.breadhub.events.listeners.CommandListener;
+import uk.co.breadhub.events.listeners.PlayerListener;
 
-public final class Main extends JavaPlugin {
+public final class Main extends JavaPlugin implements Listener {
     public static Main instance;
 
     public static Main getInstance() {
@@ -27,6 +29,8 @@ public final class Main extends JavaPlugin {
         // setup database
 
         // register listeners
+        this.getServer().getPluginManager().registerEvents(this, this);
+        this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 
         // register commands
         getCommand("events").setExecutor(new CommandListener());

@@ -24,7 +24,8 @@ public class PlayerStatisticsUtil {
         stats.add(this);
         map.put(uuid, this);
         // add to database
-        DatabaseImpl.addPlayerStats(uuid,
+        DatabaseImpl.addPlayerStats(
+                uuid,
                 getStatistic(StatisticType.DAMAGE_DEALT),
                 getStatistic(StatisticType.DAMAGE_TAKEN),
                 getStatistic(StatisticType.DEATHS),
