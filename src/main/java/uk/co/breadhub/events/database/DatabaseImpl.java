@@ -211,7 +211,7 @@ public class DatabaseImpl {
 			long interact_with_anvil,
 			long interact_with_grindstone) {
 		try {
-			PreparedStatement ps = getConnection().prepareStatement("INSERT IGNORE INTO `playerStatistics` (" +
+			PreparedStatement ps = getConnection().prepareStatement("REPLACE INTO `playerStatistics` (" +
 					"`UUID`, " +
 					"`DAMAGE_DEALT`, " +
 					"`DAMAGE_TAKEN`, " +
@@ -377,20 +377,5 @@ public class DatabaseImpl {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-
-	public static String getPlayerStatsByUuid(UUID uuid) {
-		try {
-			PreparedStatement ps = getConnection().prepareStatement("SELECT * FROM playerStatistics WHERE UUID=?");
-			ps.setString(1, uuid.toString());
-			ResultSet rs = ps.executeQuery();
-			if(rs.next()) {
-				return rs.getString("PlayerName");
-			}
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		return null;
 	}
 }
