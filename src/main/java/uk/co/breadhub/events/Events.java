@@ -34,7 +34,7 @@ public class Events {
                 }
             }
         } else {
-
+            System.out.println("Could Not Start Event By Name: " + eventname);
         }
         return eventStarted;
     }

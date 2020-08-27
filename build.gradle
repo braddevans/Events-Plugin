@@ -1,5 +1,7 @@
 apply plugin: 'java'
 
+import org.apache.tools.ant.filters.ReplaceTokens
+
 group = 'uk.co.breadhub'
 version = '1.0-SNAPSHOT'
 
@@ -18,4 +20,12 @@ repositories {
 dependencies {
     compileOnly 'org.bukkit:bukkit:1.15.2-R0.1-SNAPSHOT'
     compileOnly group: "com.comphenix.protocol", name: "ProtocolLib", version: "4.5.0";
+}
+
+
+processResources {
+    from('src/main/resources') {
+        include 'plugin.yml'
+        filter(ReplaceTokens, tokens: [version : project.version])
+    }
 }

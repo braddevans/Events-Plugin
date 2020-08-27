@@ -40,11 +40,10 @@ public final class Main extends JavaPlugin implements Listener {
         this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 
         // register commands
-        getCommand("events").setExecutor(new CommandListener());
-        getCommand("eventsadmin").setExecutor(new CommandListener());
-        getCommand("eventadmin").setExecutor(new CommandListener());
         getCommand("event").setExecutor(new CommandListener());
-
+        getCommand("events").setExecutor(new CommandListener());
+        getCommand("eventadmin").setExecutor(new CommandListener());
+        getCommand("eventsadmin").setExecutor(new CommandListener());
 
         // pick a random event id from a list every x hours set in config
         // and disable event created by this when those hours are up
