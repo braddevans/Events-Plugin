@@ -3,8 +3,6 @@ version: @version@
 main: uk.co.breadhub.events.Main
 api-version: '1.15'
 load: STARTUP
-depend:
-  - ProtocolLib
 authors: [slicedbread]
 
 commands:
