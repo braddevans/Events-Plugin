@@ -55,13 +55,16 @@ scoreboard-stuff:
 ## todo: scan through the events: and spawn scheduled events from it
 ## todo: add the ability to make custom events and their times and rewards / commands / entities / location
 Events:
+  all:
+    - testevent1
+
   testevent1:
+    Enabled: false
     type: statistic
     requirement: PLAY_ONE_MINUTE
     requiredValue: 1
     reward: none
-    uses: SCOREBOARD
+    uses: scoreboard
     scoreboard:
       header: ""
       style: ""
-      updateEvery: 15

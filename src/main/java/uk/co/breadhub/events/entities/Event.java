@@ -23,6 +23,15 @@ public class Event {
         Event.active = active;
     }
 
+    public Event(int ID, String Name, boolean active) {
+        Event.id = ID;
+        Event.name = Name;
+        Event.starttime = 0;
+        Event.canExpire = false;
+        Event.expireTime = 0;
+        Event.active = active;
+    }
+
     public int getId() {
         return id;
     }
