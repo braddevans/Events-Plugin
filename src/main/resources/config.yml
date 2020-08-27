@@ -27,20 +27,41 @@ plugin:
 # ================= #
 # Events
 # ================= #
+# Usable Items and values with what they require
+#
+#
+# testevent1:
+#    type: statistic
+#    requirement: PLAY_ONE_MINUTE
+#    requiredValue: 1
+#    reward: none
+#    uses: SCOREBOARD
+#    scoreboard:
+#      header: "headertype1"
+#      style: "style1"
+#      updateEvery: 150
+
+scoreboard-stuff:
+  headers:
+    headertype1:
+      text: "test header"
+      color: "&6"
+
+    styles:
+      style1:
+        ordering: numerical-top-big-to-small
+
 
 ## todo: scan through the events: and spawn scheduled events from it
 ## todo: add the ability to make custom events and their times and rewards / commands / entities / location
-#Events:
-#  testEvent1:
-#    # ReOccuringTime can be removed if needed
-#    ReOccuringTime: 600
-#    # command on completion can be removed if needed
-#    commandsOnCompletion:
-#      - "give {player} diamond 1"
-#
-#    # location not needed
-#    location:
-#      x: 100
-#      y: 10
-#      z: 100
-#      world: "world"
+Events:
+  testevent1:
+    type: statistic
+    requirement: PLAY_ONE_MINUTE
+    requiredValue: 1
+    reward: none
+    uses: SCOREBOARD
+    scoreboard:
+      header: ""
+      style: ""
+      updateEvery: 15

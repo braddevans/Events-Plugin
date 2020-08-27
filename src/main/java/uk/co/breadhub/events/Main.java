@@ -1,12 +1,19 @@
 package uk.co.breadhub.events;
 
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import uk.co.breadhub.events.listeners.CommandListener;
 import uk.co.breadhub.events.listeners.PlayerListener;
+import uk.co.breadhub.events.utils.ScoreboardSign;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public final class Main extends JavaPlugin implements Listener {
     public static Main instance;
+    public Map<Player, ScoreboardSign> boards = new HashMap<>();
+
 
     public static Main getInstance() {
         return instance;
