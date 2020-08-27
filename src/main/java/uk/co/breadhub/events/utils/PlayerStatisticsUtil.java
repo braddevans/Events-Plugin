@@ -113,15 +113,6 @@ public class PlayerStatisticsUtil {
         else return new PlayerStatisticsUtil(p.getUniqueId());
     }
 
-    public void setStatistic(StatisticType stat, long value) {
-        statistics.put(stat, value);
-    }
-
-    public void addToStatistic(StatisticType stat, long addition) {
-        setStatistic(stat, getStatistic(stat) + addition);
-    }
-
-
     public static void unregister(Player p) {
         if (map.containsKey(p.getUniqueId())) {
             PlayerStatisticsUtil ps = map.get(p.getUniqueId());
@@ -129,6 +120,14 @@ public class PlayerStatisticsUtil {
             stats.remove(ps);
             map.remove(p.getUniqueId());
         }
+    }
+
+    public void setStatistic(StatisticType stat, long value) {
+        statistics.put(stat, value);
+    }
+
+    public void addToStatistic(StatisticType stat, long addition) {
+        setStatistic(stat, getStatistic(stat) + addition);
     }
 
     public long getStatistic(StatisticType stat) {

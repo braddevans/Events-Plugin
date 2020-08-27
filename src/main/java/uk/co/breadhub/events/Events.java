@@ -26,9 +26,9 @@ public class Events {
 
     public static boolean startEventByName(String eventname) {
         boolean eventStarted = false;
-        if (getEventNames().contains(eventname)){
-            for(Event event : getEvents()){
-                if (event.getName().toLowerCase().equals(eventname.toLowerCase())){
+        if (getEventNames().contains(eventname)) {
+            for (Event event : getEvents()) {
+                if (event.getName().toLowerCase().equals(eventname.toLowerCase())) {
                     event.setActive(true);
                     eventStarted = true;
                 }

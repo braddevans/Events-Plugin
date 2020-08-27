@@ -82,10 +82,10 @@ public enum StatisticType {
     INTERACT_WITH_ANVIL,
     INTERACT_WITH_GRINDSTONE;
 
-    public static String getByKeyName(String namekey){
+    public static String getByKeyName(String namekey) {
         String name = "doesnotexist";
         for (StatisticType value : values()) {
-            if (value.name().toLowerCase().equals(namekey.toLowerCase())){
+            if (value.name().toLowerCase().equals(namekey.toLowerCase())) {
                 name = value.name();
             }
         }
