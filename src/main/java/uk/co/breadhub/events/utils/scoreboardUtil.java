@@ -15,9 +15,9 @@ import java.util.Map.Entry;
 
 public class scoreboardUtil {
 
-    private Scoreboard scoreboard;
-    private Objective objective;
-    private BiMap<String, ScoreboardutilEntry> entries;
+    private final Scoreboard scoreboard;
+    private final Objective objective;
+    private final BiMap<String, ScoreboardutilEntry> entries;
 
     private int teamId;
 
@@ -172,15 +172,15 @@ public class scoreboardUtil {
 
     public class ScoreboardutilEntry {
 
-        private String key;
-        private scoreboardUtil Scoreboardutil;
+        private final String key;
+        private final scoreboardUtil Scoreboardutil;
         private String name;
         private Team team;
         private Score score;
         private int value;
 
         private String origName;
-        private int count;
+        private final int count;
 
         public ScoreboardutilEntry(String key, scoreboardUtil Scoreboardutil, int value) {
             this.key = key;
