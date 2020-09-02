@@ -14,12 +14,13 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        //MiscUtils.createScoreboardForPlayer(player);
-        MiscUtils.createTestScoreboardForPlayer(player);
         Statistics stats;
         stats = new Statistics(player);
+        stats.checkForNulls();
         Main.getInstance().playerStats.put(player, stats);
         System.out.println(Main.getInstance().playerStats.get(player).toString());
+        //MiscUtils.createScoreboardForPlayer(player);
+        MiscUtils.createOnlinePlayersScoreboard(player);
     }
 
     @EventHandler

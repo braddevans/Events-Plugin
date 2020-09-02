@@ -3,6 +3,8 @@ package uk.co.breadhub.events.entities;
 import org.bukkit.Statistic;
 import org.bukkit.entity.Player;
 
+import java.util.Objects;
+
 public class Statistics {
 
     //=====================================================//
@@ -17,6 +19,7 @@ public class Statistics {
     //public long kill_entity = 0;
     //public long entity_killed_by = 0;
 
+    public static Statistics instance;
     public long damage_dealt = 0;
     public long damage_taken = 0;
     public long deaths = 0;
@@ -93,6 +96,7 @@ public class Statistics {
     }
 
     public Statistics(Player player) {
+        instance = this;
         //=====================================================//
         // todo: depends on external materials or entities     //
         //=====================================================//
@@ -115,7 +119,7 @@ public class Statistics {
         leave_game = Long.parseLong(String.valueOf(player.getStatistic(Statistic.valueOf("LEAVE_GAME"))));
         jump = Long.parseLong(String.valueOf(player.getStatistic(Statistic.valueOf("JUMP"))));
         drop_count = Long.parseLong(String.valueOf(player.getStatistic(Statistic.valueOf("DROP_COUNT"))));
-        play_one_minute = Long.parseLong(String.valueOf(player.getStatistic(Statistic.valueOf("PLAY_ONE_MINUTE")) * 1000L));
+        play_one_minute = Long.parseLong(String.valueOf(player.getStatistic(Statistic.valueOf("PLAY_ONE_MINUTE"))));
         walk_one_cm = Long.parseLong(String.valueOf(player.getStatistic(Statistic.valueOf("WALK_ONE_CM"))));
         walk_on_water_one_cm = Long.parseLong(String.valueOf(player.getStatistic(Statistic.valueOf("WALK_ON_WATER_ONE_CM"))));
         fall_one_cm = Long.parseLong(String.valueOf(player.getStatistic(Statistic.valueOf("FALL_ONE_CM"))));
@@ -821,5 +825,291 @@ public class Statistics {
                 ", interact_with_anvil=" + interact_with_anvil +
                 ", interact_with_grindstone=" + interact_with_grindstone +
                 '}';
+    }
+
+    public void checkForNulls() {
+        if (Objects.isNull(instance.damage_dealt)) {
+            instance.damage_dealt = 0;
+        }
+
+        if (Objects.isNull(instance.damage_taken)) {
+            instance.damage_taken = 0;
+        }
+
+        if (Objects.isNull(instance.deaths)) {
+            instance.deaths = 0;
+        }
+
+        if (Objects.isNull(instance.mob_kills)) {
+            instance.mob_kills = 0;
+        }
+
+        if (Objects.isNull(instance.player_kills)) {
+            instance.player_kills = 0;
+        }
+
+        if (Objects.isNull(instance.fish_caught)) {
+            instance.fish_caught = 0;
+        }
+
+        if (Objects.isNull(instance.animals_bred)) {
+            instance.animals_bred = 0;
+        }
+
+        if (Objects.isNull(instance.leave_game)) {
+            instance.leave_game = 0;
+        }
+
+        if (Objects.isNull(instance.jump)) {
+            instance.jump = 0;
+        }
+
+        if (Objects.isNull(instance.drop_count)) {
+            instance.drop_count = 0;
+        }
+
+        if (Objects.isNull(instance.play_one_minute)) {
+            instance.play_one_minute = 0;
+        }
+
+        if (Objects.isNull(instance.walk_one_cm)) {
+            instance.walk_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.walk_on_water_one_cm)) {
+            instance.walk_on_water_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.fall_one_cm)) {
+            instance.fall_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.sneak_time)) {
+            instance.sneak_time = 0;
+        }
+
+        if (Objects.isNull(instance.climb_one_cm)) {
+            instance.climb_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.fly_one_cm)) {
+            instance.fly_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.walk_under_water_one_cm)) {
+            instance.walk_under_water_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.minecart_one_cm)) {
+            instance.minecart_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.boat_one_cm)) {
+            instance.boat_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.pig_one_cm)) {
+            instance.pig_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.horse_one_cm)) {
+            instance.horse_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.sprint_one_cm)) {
+            instance.sprint_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.crouch_one_cm)) {
+            instance.crouch_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.aviate_one_cm)) {
+            instance.aviate_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.time_since_death)) {
+            instance.time_since_death = 0;
+        }
+
+        if (Objects.isNull(instance.talked_to_villager)) {
+            instance.talked_to_villager = 0;
+        }
+
+        if (Objects.isNull(instance.traded_with_villager)) {
+            instance.traded_with_villager = 0;
+        }
+
+        if (Objects.isNull(instance.cake_slices_eaten)) {
+            instance.cake_slices_eaten = 0;
+        }
+
+        if (Objects.isNull(instance.cauldron_filled)) {
+            instance.cauldron_filled = 0;
+        }
+
+        if (Objects.isNull(instance.cauldron_used)) {
+            instance.cauldron_used = 0;
+        }
+
+        if (Objects.isNull(instance.armor_cleaned)) {
+            instance.armor_cleaned = 0;
+        }
+
+        if (Objects.isNull(instance.banner_cleaned)) {
+            instance.banner_cleaned = 0;
+        }
+
+        if (Objects.isNull(instance.brewingstand_interaction)) {
+            instance.brewingstand_interaction = 0;
+        }
+
+        if (Objects.isNull(instance.beacon_interaction)) {
+            instance.beacon_interaction = 0;
+        }
+
+        if (Objects.isNull(instance.dropper_inspected)) {
+            instance.dropper_inspected = 0;
+        }
+
+        if (Objects.isNull(instance.hopper_inspected)) {
+            instance.hopper_inspected = 0;
+        }
+
+        if (Objects.isNull(instance.dispenser_inspected)) {
+            instance.dispenser_inspected = 0;
+        }
+
+        if (Objects.isNull(instance.noteblock_played)) {
+            instance.noteblock_played = 0;
+        }
+
+        if (Objects.isNull(instance.noteblock_tuned)) {
+            instance.noteblock_tuned = 0;
+        }
+
+        if (Objects.isNull(instance.flower_potted)) {
+            instance.flower_potted = 0;
+        }
+
+        if (Objects.isNull(instance.trapped_chest_triggered)) {
+            instance.trapped_chest_triggered = 0;
+        }
+
+        if (Objects.isNull(instance.enderchest_opened)) {
+            instance.enderchest_opened = 0;
+        }
+
+        if (Objects.isNull(instance.item_enchanted)) {
+            instance.item_enchanted = 0;
+        }
+
+        if (Objects.isNull(instance.record_played)) {
+            instance.record_played = 0;
+        }
+
+        if (Objects.isNull(instance.furnace_interaction)) {
+            instance.furnace_interaction = 0;
+        }
+
+        if (Objects.isNull(instance.crafting_table_interaction)) {
+            instance.crafting_table_interaction = 0;
+        }
+
+        if (Objects.isNull(instance.chest_opened)) {
+            instance.chest_opened = 0;
+        }
+
+        if (Objects.isNull(instance.sleep_in_bed)) {
+            instance.sleep_in_bed = 0;
+        }
+
+        if (Objects.isNull(instance.shulker_box_opened)) {
+            instance.shulker_box_opened = 0;
+        }
+
+        if (Objects.isNull(instance.time_since_rest)) {
+            instance.time_since_rest = 0;
+        }
+
+        if (Objects.isNull(instance.swim_one_cm)) {
+            instance.swim_one_cm = 0;
+        }
+
+        if (Objects.isNull(instance.damage_dealt_absorbed)) {
+            instance.damage_dealt_absorbed = 0;
+        }
+
+        if (Objects.isNull(instance.damage_dealt_resisted)) {
+            instance.damage_dealt_resisted = 0;
+        }
+
+        if (Objects.isNull(instance.damage_blocked_by_shield)) {
+            instance.damage_blocked_by_shield = 0;
+        }
+
+        if (Objects.isNull(instance.damage_absorbed)) {
+            instance.damage_absorbed = 0;
+        }
+
+        if (Objects.isNull(instance.damage_resisted)) {
+            instance.damage_resisted = 0;
+        }
+
+        if (Objects.isNull(instance.clean_shulker_box)) {
+            instance.clean_shulker_box = 0;
+        }
+
+        if (Objects.isNull(instance.open_barrel)) {
+            instance.open_barrel = 0;
+        }
+
+        if (Objects.isNull(instance.interact_with_blast_furnace)) {
+            instance.interact_with_blast_furnace = 0;
+        }
+
+        if (Objects.isNull(instance.interact_with_smoker)) {
+            instance.interact_with_smoker = 0;
+        }
+
+        if (Objects.isNull(instance.interact_with_lectern)) {
+            instance.interact_with_lectern = 0;
+        }
+
+        if (Objects.isNull(instance.interact_with_campfire)) {
+            instance.interact_with_campfire = 0;
+        }
+
+        if (Objects.isNull(instance.interact_with_cartography_table)) {
+            instance.interact_with_cartography_table = 0;
+        }
+
+        if (Objects.isNull(instance.interact_with_loom)) {
+            instance.interact_with_loom = 0;
+        }
+
+        if (Objects.isNull(instance.interact_with_stonecutter)) {
+            instance.interact_with_stonecutter = 0;
+        }
+
+        if (Objects.isNull(instance.bell_ring)) {
+            instance.bell_ring = 0;
+        }
+
+        if (Objects.isNull(instance.raid_trigger)) {
+            instance.raid_trigger = 0;
+        }
+
+        if (Objects.isNull(instance.raid_win)) {
+            instance.raid_win = 0;
+        }
+
+        if (Objects.isNull(instance.interact_with_anvil)) {
+            instance.interact_with_anvil = 0;
+        }
+
+        if (Objects.isNull(instance.interact_with_grindstone)) {
+            instance.interact_with_grindstone = 0;
+        }
     }
 }

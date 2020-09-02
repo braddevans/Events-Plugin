@@ -269,7 +269,7 @@ public class scoreboardUtil {
             }
 
             // Credit to RainoBoy97 for this section here.
-            team = Scoreboardutil.getScoreboard().registerNewTeam("Scoreboardutil-" + Scoreboardutil.getTeamId());
+            team = Scoreboardutil.getScoreboard().registerNewTeam("Sbu-" + Scoreboardutil.getTeamId());
             Iterator<String> iterator = Splitter.fixedLength(16).split(name).iterator();
             team.setPrefix(iterator.next());
             String entry = iterator.next();

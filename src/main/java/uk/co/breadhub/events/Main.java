@@ -1,5 +1,6 @@
 package uk.co.breadhub.events;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -7,6 +8,7 @@ import uk.co.breadhub.events.entities.Event;
 import uk.co.breadhub.events.entities.Statistics;
 import uk.co.breadhub.events.listeners.CommandListener;
 import uk.co.breadhub.events.listeners.PlayerListener;
+import uk.co.breadhub.events.utils.MiscUtils;
 import uk.co.breadhub.events.utils.scoreboardUtil;
 
 import java.util.ArrayList;
@@ -62,18 +64,31 @@ public final class Main extends JavaPlugin implements Listener {
             events.put(new Event(events.size() + 1, event, isEnabled), isEnabled);
             if (getConfig().getString("Events." + event + ".uses").toLowerCase().equals("scoreboard") && getConfig().getString("Events." + event + ".uses") != null) {
                 scoreboardEvents.put(new Event(events.size() + 1, event, isEnabled), isEnabled);
-                // add current online players to scoreboard
-                // MiscUtils.createScoreboardForPlayer();
             }
         }
+
+        runScoreboardUpdateLoop();
 
         // pick a random event id from a list every x hours set in config
         // and disable event created by this when those hours are up
         // randomEventPicker();
     }
 
+    private void runScoreboardUpdateLoop() {
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> {
+                    for (Player player : Bukkit.getOnlinePlayers()) {
+                        boards.remove(player);
+                        MiscUtils.createOnlinePlayersScoreboard(player);
+                    }
+                },
+                20 * 5,
+                20 * 5);
+    }
+
     @Override
     public void onDisable() {
         // Plugin shutdown logic
     }
+
+
 }
