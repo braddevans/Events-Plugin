@@ -1,8 +1,13 @@
 package uk.co.breadhub.events.entities;
 
+import uk.co.breadhub.events.Main;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Event {
 
+    private static List<String> commandsOnCompletion = new ArrayList<>();
     public static long starttime;
     public static int id;
     public static String name;
@@ -11,15 +16,13 @@ public class Event {
     public static boolean active;
 
 
-    public Event() {
-    }
-
-    public Event(int ID, String Name, long startTime, boolean canExpire, long expireTime, boolean active) {
+    public Event(int ID, String Name, long startTime, boolean canExpire, long expireTime, List<String> commands, boolean active) {
         Event.id = ID;
         Event.name = Name;
         Event.starttime = startTime;
         Event.canExpire = canExpire;
         Event.expireTime = expireTime;
+        Event.commandsOnCompletion = commands;
         Event.active = active;
     }
 
@@ -28,6 +31,16 @@ public class Event {
         Event.name = Name;
         Event.starttime = 0;
         Event.canExpire = false;
+        Event.expireTime = 0;
+        Event.active = active;
+    }
+
+    public Event(int ID, String Name, List<String> commands, boolean active) {
+        Event.id = ID;
+        Event.name = Name;
+        Event.starttime = 0;
+        Event.canExpire = false;
+        Event.commandsOnCompletion = commands;
         Event.expireTime = 0;
         Event.active = active;
     }
@@ -78,5 +91,17 @@ public class Event {
 
     public void setActive(boolean active) {
         Event.active = active;
+    }
+
+    public static List<String> getCommandsOnCompletion() {
+        return commandsOnCompletion;
+    }
+
+    public static void setCommandsOnCompletion(List<String> commandsOnCompletion) {
+        Event.commandsOnCompletion = commandsOnCompletion;
+    }
+
+    public void register() {
+        Main.events.putIfAbsent(getName(), this);
     }
 }

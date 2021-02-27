@@ -3,7 +3,7 @@ package uk.co.breadhub.events.listeners;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import uk.co.breadhub.events.Events;
+import uk.co.breadhub.events.utils.EventsUtil;
 import uk.co.breadhub.events.utils.MiscUtils;
 
 public class CommandListener implements CommandExecutor {
@@ -20,18 +20,18 @@ public class CommandListener implements CommandExecutor {
                     switch (args[0].toLowerCase()) {
                         case "start": {
                             if (sender.hasPermission("events.admin") || sender.hasPermission("events.*")) {
-                                Events.startEventByName(args[1]);
+                                EventsUtil.startEventByName(args[1]);
                             } else {
                                 sender.sendMessage(MiscUtils.toColorText("&4You do not have permission to do that command!&r"));
                             }
                             break;
                         }
                         case "list": {
-                            sender.sendMessage(MiscUtils.toColorText("&6Events&7: &4[&3" + Events.getEvents().toString() + "&4]"));
+                            sender.sendMessage(MiscUtils.toColorText("&6Events&7: &4[&3" + EventsUtil.getEvents().toString() + "&4]"));
                             break;
                         }
                         case "active": {
-                            sender.sendMessage(MiscUtils.toColorText("&6Active Events&7: &4[&2" + Events.getActiveEvents().toString() + "&4]"));
+                            sender.sendMessage(MiscUtils.toColorText("&6Active Events&7: &4[&2" + EventsUtil.getActiveEvents().toString() + "&4]"));
                             break;
                         }
                         default:
