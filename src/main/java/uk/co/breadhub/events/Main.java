@@ -1,7 +1,5 @@
 package uk.co.breadhub.events;
 
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -9,18 +7,18 @@ import uk.co.breadhub.events.entities.Event;
 import uk.co.breadhub.events.entities.Statistics;
 import uk.co.breadhub.events.listeners.CommandListener;
 import uk.co.breadhub.events.listeners.PlayerListener;
+import uk.co.breadhub.events.utils.EventsUtil;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 public final class Main extends JavaPlugin implements Listener {
     public static Main instance;
+    public static HashMap<String, Event> events = new HashMap<>();
     private final File eventsFolder = new File(getDataFolder().getAbsolutePath() + File.separator + "events");
     public Map<Player, Statistics> playerStats = new HashMap<>();
-    public static HashMap<String,Event> events = new HashMap<>();
 
     public static Main getInstance() {
         return instance;
@@ -45,7 +43,7 @@ public final class Main extends JavaPlugin implements Listener {
             eventsFolder.mkdirs();
         }
 
-        // setup database
+        EventsUtil.loadEventConfigs();
 
         // register listeners
         getServer().getPluginManager().registerEvents(this, this);
@@ -59,57 +57,9 @@ public final class Main extends JavaPlugin implements Listener {
 
     }
 
-    public static void loadEventConfigs() {
-        List<File> fileList = getSubFilesFromFile(Main.getInstance().getEventsFolder());
-        for (File file : fileList) {
-            if (file == null) {
-                continue;
-            }
-            YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
-            //Some codes
-            if (config.getKeys(false).isEmpty()) {
-                continue;
-            }
-            for (String key : config.getKeys(false)) {
-                ConfigurationSection objectSection = config.getConfigurationSection(key);
-                Event event = createEventData(objectSection);
-                event.register();
-            }
-        }
-    }
-
-    public static Event createEventData(ConfigurationSection section) {
-        String key = section.getName();
-        boolean active = section.getBoolean("active");
-        List<String> runCommands = section.getStringList("runCommands");
-        return new Event(events.size(), key, runCommands, active);
-    }
-
-
-    public static List<File> getSubFilesFromFile(File file) {
-        List<File> files = new ArrayList<>();
-        File[] allFiles = file.listFiles();
-        if (allFiles == null) {
-            return files;
-        }
-        for (File subFile : allFiles) {
-            if (! subFile.getName().endsWith(".yml")) {
-                continue;
-            }
-            if (subFile.isFile()) {
-                files.add(subFile);
-            }
-            else {
-                files.addAll(getSubFilesFromFile(subFile));
-            }
-        }
-        return files;
-    }
-
     public File getEventsFolder() {
         return eventsFolder;
     }
-
 
     @Override
     public void onDisable() {

@@ -1,9 +1,12 @@
 package uk.co.breadhub.events.utils;
 
 import org.bukkit.ChatColor;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.configuration.file.YamlConfiguration;
 import uk.co.breadhub.events.Main;
 import uk.co.breadhub.events.entities.Event;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +34,7 @@ public class EventsUtil {
         boolean eventStarted = false;
         if (getEventNames().contains(eventname)) {
             for (Event event : EventsUtil.getEvents().values()) {
-                if (event.getName().toLowerCase().equals(eventname.toLowerCase())) {
+                if (event.getName().equalsIgnoreCase(eventname)) {
                     event.setActive(true);
                     eventStarted = true;
                 }
@@ -67,5 +70,32 @@ public class EventsUtil {
             }
         }
         return active;
+    }
+
+    public static void loadEventConfigs() {
+        List<File> fileList = MiscUtils.getSubFilesFromFile(Main.getInstance().getEventsFolder());
+        for (File file : fileList) {
+            if (file == null) {
+                continue;
+            }
+            YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+            //Some codes
+            if (config.getKeys(false).isEmpty()) {
+                continue;
+            }
+            for (String key : config.getKeys(false)) {
+                ConfigurationSection objectSection = config.getConfigurationSection(key);
+                Event event = createEventData(objectSection);
+                event.register();
+            }
+        }
+    }
+
+    public static Event createEventData(ConfigurationSection section) {
+        String key = section.getName();
+        String discription = section.getString("discription");
+        boolean active = section.getBoolean("active");
+        List<String> runCommands = section.getStringList("runCommands");
+        return new Event(Main.events.size(), key, discription, runCommands, active, section);
     }
 }

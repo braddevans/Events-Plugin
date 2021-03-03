@@ -21,7 +21,8 @@ public class CommandListener implements CommandExecutor {
                         case "start": {
                             if (sender.hasPermission("events.admin") || sender.hasPermission("events.*")) {
                                 EventsUtil.startEventByName(args[1]);
-                            } else {
+                            }
+                            else {
                                 sender.sendMessage(MiscUtils.toColorText("&4You do not have permission to do that command!&r"));
                             }
                             break;
@@ -39,7 +40,8 @@ public class CommandListener implements CommandExecutor {
                             break;
                     }
                     break;
-                } else {
+                }
+                else {
                     sendHelpMessage(sender);
                 }
                 break;

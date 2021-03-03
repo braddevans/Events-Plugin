@@ -76,14 +76,14 @@ public enum StatisticType {
 
     public int statvalue;
 
-    StatisticType(int statvalue){
+    StatisticType(int statvalue) {
         this.statvalue = statvalue;
     }
 
     public static int getByKeyName(String namekey) {
         int stat = 0;
         for (StatisticType value : values()) {
-            if (value.name().toLowerCase().equals(namekey.toLowerCase())) {
+            if (value.name().equalsIgnoreCase(namekey)) {
                 stat = value.statvalue;
             }
         }

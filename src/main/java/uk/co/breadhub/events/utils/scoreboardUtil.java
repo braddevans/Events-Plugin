@@ -68,7 +68,7 @@ public class scoreboardUtil {
     }
 
     public ScoreboardutilEntry add(String key, String name, int value, boolean overwrite) {
-        if (key == null && !contains(name)) {
+        if (key == null && ! contains(name)) {
             throw new IllegalArgumentException("Entry could not be found with the supplied name and no key was supplied");
         }
 
@@ -88,7 +88,7 @@ public class scoreboardUtil {
 
         int count = 0;
         String origName = name;
-        if (!overwrite) {
+        if (! overwrite) {
             Map<Integer, String> created = create(name);
             for (Entry<Integer, String> entry : created.entrySet()) {
                 count = entry.getKey();
@@ -174,13 +174,12 @@ public class scoreboardUtil {
 
         private final String key;
         private final scoreboardUtil Scoreboardutil;
+        private final int count;
         private String name;
         private Team team;
         private Score score;
         private int value;
-
         private String origName;
-        private final int count;
 
         public ScoreboardutilEntry(String key, scoreboardUtil Scoreboardutil, int value) {
             this.key = key;
@@ -222,8 +221,8 @@ public class scoreboardUtil {
         }
 
         public void setValue(int value) {
-            if (!score.isScoreSet()) {
-                score.setScore(-1);
+            if (! score.isScoreSet()) {
+                score.setScore(- 1);
             }
 
             score.setScore(value);
@@ -238,7 +237,8 @@ public class scoreboardUtil {
                 }
 
                 // Bukkit.getLogger().info("Changed '" + oldName + "' (" + oldName.length() + ") into '" + newName + "' (" + newName.length() + ")");
-            } else if (newName.equals(name)) {
+            }
+            else if (newName.equals(name)) {
                 // Bukkit.getLogger().info("Not updating '" + newName + "' because it matches previous name");
                 return;
             }
@@ -274,8 +274,7 @@ public class scoreboardUtil {
             team.setPrefix(iterator.next());
             String entry = iterator.next();
             score = Scoreboardutil.getObjective().getScore(entry);
-            if (name.length() > 32)
-                team.setSuffix(iterator.next());
+            if (name.length() > 32) { team.setSuffix(iterator.next()); }
 
             team.addEntry(entry);
         }

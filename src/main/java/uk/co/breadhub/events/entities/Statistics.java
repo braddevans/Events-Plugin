@@ -186,564 +186,564 @@ public class Statistics {
         return damage_dealt;
     }
 
-    public long getDamage_taken() {
-        return damage_taken;
-    }
-
-    public long getDeaths() {
-        return deaths;
-    }
-
-    public long getMob_kills() {
-        return mob_kills;
-    }
-
-    public long getPlayer_kills() {
-        return player_kills;
-    }
-
-    public long getFish_caught() {
-        return fish_caught;
-    }
-
-    public long getAnimals_bred() {
-        return animals_bred;
-    }
-
-    public long getLeave_game() {
-        return leave_game;
-    }
-
-    public long getJump() {
-        return jump;
-    }
-
-    public long getDrop_count() {
-        return drop_count;
-    }
-
-    public long getPlay_one_minute() {
-        return play_one_minute;
-    }
-
-    public long getWalk_one_cm() {
-        return walk_one_cm;
-    }
-
-    public long getWalk_on_water_one_cm() {
-        return walk_on_water_one_cm;
-    }
-
-    public long getFall_one_cm() {
-        return fall_one_cm;
-    }
-
-    public long getSneak_time() {
-        return sneak_time;
-    }
-
-    public long getClimb_one_cm() {
-        return climb_one_cm;
-    }
-
-    public long getFly_one_cm() {
-        return fly_one_cm;
-    }
-
-    public long getWalk_under_water_one_cm() {
-        return walk_under_water_one_cm;
-    }
-
-    public long getMinecart_one_cm() {
-        return minecart_one_cm;
-    }
-
-    public long getBoat_one_cm() {
-        return boat_one_cm;
-    }
-
-    public long getPig_one_cm() {
-        return pig_one_cm;
-    }
-
-    public long getHorse_one_cm() {
-        return horse_one_cm;
-    }
-
-    public long getSprint_one_cm() {
-        return sprint_one_cm;
-    }
-
-    public long getCrouch_one_cm() {
-        return crouch_one_cm;
-    }
-
-    public long getAviate_one_cm() {
-        return aviate_one_cm;
-    }
-
-    public long getTime_since_death() {
-        return time_since_death;
-    }
-
-    public long getTalked_to_villager() {
-        return talked_to_villager;
-    }
-
-    public long getTraded_with_villager() {
-        return traded_with_villager;
-    }
-
-    public long getCake_slices_eaten() {
-        return cake_slices_eaten;
-    }
-
-    public long getCauldron_filled() {
-        return cauldron_filled;
-    }
-
-    public long getCauldron_used() {
-        return cauldron_used;
-    }
-
-    public long getArmor_cleaned() {
-        return armor_cleaned;
-    }
-
-    public long getBanner_cleaned() {
-        return banner_cleaned;
-    }
-
-    public long getBrewingstand_interaction() {
-        return brewingstand_interaction;
-    }
-
-    public long getBeacon_interaction() {
-        return beacon_interaction;
-    }
-
-    public long getDropper_inspected() {
-        return dropper_inspected;
-    }
-
-    public long getHopper_inspected() {
-        return hopper_inspected;
-    }
-
-    public long getDispenser_inspected() {
-        return dispenser_inspected;
-    }
-
-    public long getNoteblock_played() {
-        return noteblock_played;
-    }
-
-    public long getNoteblock_tuned() {
-        return noteblock_tuned;
-    }
-
-    public long getFlower_potted() {
-        return flower_potted;
-    }
-
-    public long getTrapped_chest_triggered() {
-        return trapped_chest_triggered;
-    }
-
-    public long getEnderchest_opened() {
-        return enderchest_opened;
-    }
-
-    public long getItem_enchanted() {
-        return item_enchanted;
-    }
-
-    public long getRecord_played() {
-        return record_played;
-    }
-
-    public long getFurnace_interaction() {
-        return furnace_interaction;
-    }
-
-    public long getCrafting_table_interaction() {
-        return crafting_table_interaction;
-    }
-
-    public long getChest_opened() {
-        return chest_opened;
-    }
-
-    public long getSleep_in_bed() {
-        return sleep_in_bed;
-    }
-
-    public long getShulker_box_opened() {
-        return shulker_box_opened;
-    }
-
-    public long getTime_since_rest() {
-        return time_since_rest;
-    }
-
-    public long getSwim_one_cm() {
-        return swim_one_cm;
-    }
-
-    public long getDamage_dealt_absorbed() {
-        return damage_dealt_absorbed;
-    }
-
-    public long getDamage_dealt_resisted() {
-        return damage_dealt_resisted;
-    }
-
-    public long getDamage_blocked_by_shield() {
-        return damage_blocked_by_shield;
-    }
-
-    public long getDamage_absorbed() {
-        return damage_absorbed;
-    }
-
-    public long getDamage_resisted() {
-        return damage_resisted;
-    }
-
-    public long getClean_shulker_box() {
-        return clean_shulker_box;
-    }
-
-    public long getOpen_barrel() {
-        return open_barrel;
-    }
-
-    public long getInteract_with_blast_furnace() {
-        return interact_with_blast_furnace;
-    }
-
-    public long getInteract_with_smoker() {
-        return interact_with_smoker;
-    }
-
-    public long getInteract_with_lectern() {
-        return interact_with_lectern;
-    }
-
-    public long getInteract_with_campfire() {
-        return interact_with_campfire;
-    }
-
-    public long getInteract_with_cartography_table() {
-        return interact_with_cartography_table;
-    }
-
-    public long getInteract_with_loom() {
-        return interact_with_loom;
-    }
-
-    public long getInteract_with_stonecutter() {
-        return interact_with_stonecutter;
-    }
-
-    public long getBell_ring() {
-        return bell_ring;
-    }
-
-    public long getRaid_trigger() {
-        return raid_trigger;
-    }
-
-    public long getRaid_win() {
-        return raid_win;
-    }
-
-    public long getInteract_with_anvil() {
-        return interact_with_anvil;
-    }
-
-    public long getInteract_with_grindstone() {
-        return interact_with_grindstone;
-    }
-
     public void setDamage_dealt(long damage_dealt) {
         this.damage_dealt = damage_dealt;
+    }
+
+    public long getDamage_taken() {
+        return damage_taken;
     }
 
     public void setDamage_taken(long damage_taken) {
         this.damage_taken = damage_taken;
     }
 
+    public long getDeaths() {
+        return deaths;
+    }
+
     public void setDeaths(long deaths) {
         this.deaths = deaths;
+    }
+
+    public long getMob_kills() {
+        return mob_kills;
     }
 
     public void setMob_kills(long mob_kills) {
         this.mob_kills = mob_kills;
     }
 
+    public long getPlayer_kills() {
+        return player_kills;
+    }
+
     public void setPlayer_kills(long player_kills) {
         this.player_kills = player_kills;
+    }
+
+    public long getFish_caught() {
+        return fish_caught;
     }
 
     public void setFish_caught(long fish_caught) {
         this.fish_caught = fish_caught;
     }
 
+    public long getAnimals_bred() {
+        return animals_bred;
+    }
+
     public void setAnimals_bred(long animals_bred) {
         this.animals_bred = animals_bred;
+    }
+
+    public long getLeave_game() {
+        return leave_game;
     }
 
     public void setLeave_game(long leave_game) {
         this.leave_game = leave_game;
     }
 
+    public long getJump() {
+        return jump;
+    }
+
     public void setJump(long jump) {
         this.jump = jump;
+    }
+
+    public long getDrop_count() {
+        return drop_count;
     }
 
     public void setDrop_count(long drop_count) {
         this.drop_count = drop_count;
     }
 
+    public long getPlay_one_minute() {
+        return play_one_minute;
+    }
+
     public void setPlay_one_minute(long play_one_minute) {
         this.play_one_minute = play_one_minute;
+    }
+
+    public long getWalk_one_cm() {
+        return walk_one_cm;
     }
 
     public void setWalk_one_cm(long walk_one_cm) {
         this.walk_one_cm = walk_one_cm;
     }
 
+    public long getWalk_on_water_one_cm() {
+        return walk_on_water_one_cm;
+    }
+
     public void setWalk_on_water_one_cm(long walk_on_water_one_cm) {
         this.walk_on_water_one_cm = walk_on_water_one_cm;
+    }
+
+    public long getFall_one_cm() {
+        return fall_one_cm;
     }
 
     public void setFall_one_cm(long fall_one_cm) {
         this.fall_one_cm = fall_one_cm;
     }
 
+    public long getSneak_time() {
+        return sneak_time;
+    }
+
     public void setSneak_time(long sneak_time) {
         this.sneak_time = sneak_time;
+    }
+
+    public long getClimb_one_cm() {
+        return climb_one_cm;
     }
 
     public void setClimb_one_cm(long climb_one_cm) {
         this.climb_one_cm = climb_one_cm;
     }
 
+    public long getFly_one_cm() {
+        return fly_one_cm;
+    }
+
     public void setFly_one_cm(long fly_one_cm) {
         this.fly_one_cm = fly_one_cm;
+    }
+
+    public long getWalk_under_water_one_cm() {
+        return walk_under_water_one_cm;
     }
 
     public void setWalk_under_water_one_cm(long walk_under_water_one_cm) {
         this.walk_under_water_one_cm = walk_under_water_one_cm;
     }
 
+    public long getMinecart_one_cm() {
+        return minecart_one_cm;
+    }
+
     public void setMinecart_one_cm(long minecart_one_cm) {
         this.minecart_one_cm = minecart_one_cm;
+    }
+
+    public long getBoat_one_cm() {
+        return boat_one_cm;
     }
 
     public void setBoat_one_cm(long boat_one_cm) {
         this.boat_one_cm = boat_one_cm;
     }
 
+    public long getPig_one_cm() {
+        return pig_one_cm;
+    }
+
     public void setPig_one_cm(long pig_one_cm) {
         this.pig_one_cm = pig_one_cm;
+    }
+
+    public long getHorse_one_cm() {
+        return horse_one_cm;
     }
 
     public void setHorse_one_cm(long horse_one_cm) {
         this.horse_one_cm = horse_one_cm;
     }
 
+    public long getSprint_one_cm() {
+        return sprint_one_cm;
+    }
+
     public void setSprint_one_cm(long sprint_one_cm) {
         this.sprint_one_cm = sprint_one_cm;
+    }
+
+    public long getCrouch_one_cm() {
+        return crouch_one_cm;
     }
 
     public void setCrouch_one_cm(long crouch_one_cm) {
         this.crouch_one_cm = crouch_one_cm;
     }
 
+    public long getAviate_one_cm() {
+        return aviate_one_cm;
+    }
+
     public void setAviate_one_cm(long aviate_one_cm) {
         this.aviate_one_cm = aviate_one_cm;
+    }
+
+    public long getTime_since_death() {
+        return time_since_death;
     }
 
     public void setTime_since_death(long time_since_death) {
         this.time_since_death = time_since_death;
     }
 
+    public long getTalked_to_villager() {
+        return talked_to_villager;
+    }
+
     public void setTalked_to_villager(long talked_to_villager) {
         this.talked_to_villager = talked_to_villager;
+    }
+
+    public long getTraded_with_villager() {
+        return traded_with_villager;
     }
 
     public void setTraded_with_villager(long traded_with_villager) {
         this.traded_with_villager = traded_with_villager;
     }
 
+    public long getCake_slices_eaten() {
+        return cake_slices_eaten;
+    }
+
     public void setCake_slices_eaten(long cake_slices_eaten) {
         this.cake_slices_eaten = cake_slices_eaten;
+    }
+
+    public long getCauldron_filled() {
+        return cauldron_filled;
     }
 
     public void setCauldron_filled(long cauldron_filled) {
         this.cauldron_filled = cauldron_filled;
     }
 
+    public long getCauldron_used() {
+        return cauldron_used;
+    }
+
     public void setCauldron_used(long cauldron_used) {
         this.cauldron_used = cauldron_used;
+    }
+
+    public long getArmor_cleaned() {
+        return armor_cleaned;
     }
 
     public void setArmor_cleaned(long armor_cleaned) {
         this.armor_cleaned = armor_cleaned;
     }
 
+    public long getBanner_cleaned() {
+        return banner_cleaned;
+    }
+
     public void setBanner_cleaned(long banner_cleaned) {
         this.banner_cleaned = banner_cleaned;
+    }
+
+    public long getBrewingstand_interaction() {
+        return brewingstand_interaction;
     }
 
     public void setBrewingstand_interaction(long brewingstand_interaction) {
         this.brewingstand_interaction = brewingstand_interaction;
     }
 
+    public long getBeacon_interaction() {
+        return beacon_interaction;
+    }
+
     public void setBeacon_interaction(long beacon_interaction) {
         this.beacon_interaction = beacon_interaction;
+    }
+
+    public long getDropper_inspected() {
+        return dropper_inspected;
     }
 
     public void setDropper_inspected(long dropper_inspected) {
         this.dropper_inspected = dropper_inspected;
     }
 
+    public long getHopper_inspected() {
+        return hopper_inspected;
+    }
+
     public void setHopper_inspected(long hopper_inspected) {
         this.hopper_inspected = hopper_inspected;
+    }
+
+    public long getDispenser_inspected() {
+        return dispenser_inspected;
     }
 
     public void setDispenser_inspected(long dispenser_inspected) {
         this.dispenser_inspected = dispenser_inspected;
     }
 
+    public long getNoteblock_played() {
+        return noteblock_played;
+    }
+
     public void setNoteblock_played(long noteblock_played) {
         this.noteblock_played = noteblock_played;
+    }
+
+    public long getNoteblock_tuned() {
+        return noteblock_tuned;
     }
 
     public void setNoteblock_tuned(long noteblock_tuned) {
         this.noteblock_tuned = noteblock_tuned;
     }
 
+    public long getFlower_potted() {
+        return flower_potted;
+    }
+
     public void setFlower_potted(long flower_potted) {
         this.flower_potted = flower_potted;
+    }
+
+    public long getTrapped_chest_triggered() {
+        return trapped_chest_triggered;
     }
 
     public void setTrapped_chest_triggered(long trapped_chest_triggered) {
         this.trapped_chest_triggered = trapped_chest_triggered;
     }
 
+    public long getEnderchest_opened() {
+        return enderchest_opened;
+    }
+
     public void setEnderchest_opened(long enderchest_opened) {
         this.enderchest_opened = enderchest_opened;
+    }
+
+    public long getItem_enchanted() {
+        return item_enchanted;
     }
 
     public void setItem_enchanted(long item_enchanted) {
         this.item_enchanted = item_enchanted;
     }
 
+    public long getRecord_played() {
+        return record_played;
+    }
+
     public void setRecord_played(long record_played) {
         this.record_played = record_played;
+    }
+
+    public long getFurnace_interaction() {
+        return furnace_interaction;
     }
 
     public void setFurnace_interaction(long furnace_interaction) {
         this.furnace_interaction = furnace_interaction;
     }
 
+    public long getCrafting_table_interaction() {
+        return crafting_table_interaction;
+    }
+
     public void setCrafting_table_interaction(long crafting_table_interaction) {
         this.crafting_table_interaction = crafting_table_interaction;
+    }
+
+    public long getChest_opened() {
+        return chest_opened;
     }
 
     public void setChest_opened(long chest_opened) {
         this.chest_opened = chest_opened;
     }
 
+    public long getSleep_in_bed() {
+        return sleep_in_bed;
+    }
+
     public void setSleep_in_bed(long sleep_in_bed) {
         this.sleep_in_bed = sleep_in_bed;
+    }
+
+    public long getShulker_box_opened() {
+        return shulker_box_opened;
     }
 
     public void setShulker_box_opened(long shulker_box_opened) {
         this.shulker_box_opened = shulker_box_opened;
     }
 
+    public long getTime_since_rest() {
+        return time_since_rest;
+    }
+
     public void setTime_since_rest(long time_since_rest) {
         this.time_since_rest = time_since_rest;
+    }
+
+    public long getSwim_one_cm() {
+        return swim_one_cm;
     }
 
     public void setSwim_one_cm(long swim_one_cm) {
         this.swim_one_cm = swim_one_cm;
     }
 
+    public long getDamage_dealt_absorbed() {
+        return damage_dealt_absorbed;
+    }
+
     public void setDamage_dealt_absorbed(long damage_dealt_absorbed) {
         this.damage_dealt_absorbed = damage_dealt_absorbed;
+    }
+
+    public long getDamage_dealt_resisted() {
+        return damage_dealt_resisted;
     }
 
     public void setDamage_dealt_resisted(long damage_dealt_resisted) {
         this.damage_dealt_resisted = damage_dealt_resisted;
     }
 
+    public long getDamage_blocked_by_shield() {
+        return damage_blocked_by_shield;
+    }
+
     public void setDamage_blocked_by_shield(long damage_blocked_by_shield) {
         this.damage_blocked_by_shield = damage_blocked_by_shield;
+    }
+
+    public long getDamage_absorbed() {
+        return damage_absorbed;
     }
 
     public void setDamage_absorbed(long damage_absorbed) {
         this.damage_absorbed = damage_absorbed;
     }
 
+    public long getDamage_resisted() {
+        return damage_resisted;
+    }
+
     public void setDamage_resisted(long damage_resisted) {
         this.damage_resisted = damage_resisted;
+    }
+
+    public long getClean_shulker_box() {
+        return clean_shulker_box;
     }
 
     public void setClean_shulker_box(long clean_shulker_box) {
         this.clean_shulker_box = clean_shulker_box;
     }
 
+    public long getOpen_barrel() {
+        return open_barrel;
+    }
+
     public void setOpen_barrel(long open_barrel) {
         this.open_barrel = open_barrel;
+    }
+
+    public long getInteract_with_blast_furnace() {
+        return interact_with_blast_furnace;
     }
 
     public void setInteract_with_blast_furnace(long interact_with_blast_furnace) {
         this.interact_with_blast_furnace = interact_with_blast_furnace;
     }
 
+    public long getInteract_with_smoker() {
+        return interact_with_smoker;
+    }
+
     public void setInteract_with_smoker(long interact_with_smoker) {
         this.interact_with_smoker = interact_with_smoker;
+    }
+
+    public long getInteract_with_lectern() {
+        return interact_with_lectern;
     }
 
     public void setInteract_with_lectern(long interact_with_lectern) {
         this.interact_with_lectern = interact_with_lectern;
     }
 
+    public long getInteract_with_campfire() {
+        return interact_with_campfire;
+    }
+
     public void setInteract_with_campfire(long interact_with_campfire) {
         this.interact_with_campfire = interact_with_campfire;
+    }
+
+    public long getInteract_with_cartography_table() {
+        return interact_with_cartography_table;
     }
 
     public void setInteract_with_cartography_table(long interact_with_cartography_table) {
         this.interact_with_cartography_table = interact_with_cartography_table;
     }
 
+    public long getInteract_with_loom() {
+        return interact_with_loom;
+    }
+
     public void setInteract_with_loom(long interact_with_loom) {
         this.interact_with_loom = interact_with_loom;
+    }
+
+    public long getInteract_with_stonecutter() {
+        return interact_with_stonecutter;
     }
 
     public void setInteract_with_stonecutter(long interact_with_stonecutter) {
         this.interact_with_stonecutter = interact_with_stonecutter;
     }
 
+    public long getBell_ring() {
+        return bell_ring;
+    }
+
     public void setBell_ring(long bell_ring) {
         this.bell_ring = bell_ring;
+    }
+
+    public long getRaid_trigger() {
+        return raid_trigger;
     }
 
     public void setRaid_trigger(long raid_trigger) {
         this.raid_trigger = raid_trigger;
     }
 
+    public long getRaid_win() {
+        return raid_win;
+    }
+
     public void setRaid_win(long raid_win) {
         this.raid_win = raid_win;
     }
 
+    public long getInteract_with_anvil() {
+        return interact_with_anvil;
+    }
+
     public void setInteract_with_anvil(long interact_with_anvil) {
         this.interact_with_anvil = interact_with_anvil;
+    }
+
+    public long getInteract_with_grindstone() {
+        return interact_with_grindstone;
     }
 
     public void setInteract_with_grindstone(long interact_with_grindstone) {
@@ -753,78 +753,78 @@ public class Statistics {
     @Override
     public String toString() {
         return "Statistics{" +
-                "damage_dealt=" + damage_dealt +
-                ", damage_taken=" + damage_taken +
-                ", deaths=" + deaths +
-                ", mob_kills=" + mob_kills +
-                ", player_kills=" + player_kills +
-                ", fish_caught=" + fish_caught +
-                ", animals_bred=" + animals_bred +
-                ", leave_game=" + leave_game +
-                ", jump=" + jump +
-                ", drop_count=" + drop_count +
-                ", play_one_minute=" + play_one_minute +
-                ", walk_one_cm=" + walk_one_cm +
-                ", walk_on_water_one_cm=" + walk_on_water_one_cm +
-                ", fall_one_cm=" + fall_one_cm +
-                ", sneak_time=" + sneak_time +
-                ", climb_one_cm=" + climb_one_cm +
-                ", fly_one_cm=" + fly_one_cm +
-                ", walk_under_water_one_cm=" + walk_under_water_one_cm +
-                ", minecart_one_cm=" + minecart_one_cm +
-                ", boat_one_cm=" + boat_one_cm +
-                ", pig_one_cm=" + pig_one_cm +
-                ", horse_one_cm=" + horse_one_cm +
-                ", sprint_one_cm=" + sprint_one_cm +
-                ", crouch_one_cm=" + crouch_one_cm +
-                ", aviate_one_cm=" + aviate_one_cm +
-                ", time_since_death=" + time_since_death +
-                ", talked_to_villager=" + talked_to_villager +
-                ", traded_with_villager=" + traded_with_villager +
-                ", cake_slices_eaten=" + cake_slices_eaten +
-                ", cauldron_filled=" + cauldron_filled +
-                ", cauldron_used=" + cauldron_used +
-                ", armor_cleaned=" + armor_cleaned +
-                ", banner_cleaned=" + banner_cleaned +
-                ", brewingstand_interaction=" + brewingstand_interaction +
-                ", beacon_interaction=" + beacon_interaction +
-                ", dropper_inspected=" + dropper_inspected +
-                ", hopper_inspected=" + hopper_inspected +
-                ", dispenser_inspected=" + dispenser_inspected +
-                ", noteblock_played=" + noteblock_played +
-                ", noteblock_tuned=" + noteblock_tuned +
-                ", flower_potted=" + flower_potted +
-                ", trapped_chest_triggered=" + trapped_chest_triggered +
-                ", enderchest_opened=" + enderchest_opened +
-                ", item_enchanted=" + item_enchanted +
-                ", record_played=" + record_played +
-                ", furnace_interaction=" + furnace_interaction +
-                ", crafting_table_interaction=" + crafting_table_interaction +
-                ", chest_opened=" + chest_opened +
-                ", sleep_in_bed=" + sleep_in_bed +
-                ", shulker_box_opened=" + shulker_box_opened +
-                ", time_since_rest=" + time_since_rest +
-                ", swim_one_cm=" + swim_one_cm +
-                ", damage_dealt_absorbed=" + damage_dealt_absorbed +
-                ", damage_dealt_resisted=" + damage_dealt_resisted +
-                ", damage_blocked_by_shield=" + damage_blocked_by_shield +
-                ", damage_absorbed=" + damage_absorbed +
-                ", damage_resisted=" + damage_resisted +
-                ", clean_shulker_box=" + clean_shulker_box +
-                ", open_barrel=" + open_barrel +
-                ", interact_with_blast_furnace=" + interact_with_blast_furnace +
-                ", interact_with_smoker=" + interact_with_smoker +
-                ", interact_with_lectern=" + interact_with_lectern +
-                ", interact_with_campfire=" + interact_with_campfire +
-                ", interact_with_cartography_table=" + interact_with_cartography_table +
-                ", interact_with_loom=" + interact_with_loom +
-                ", interact_with_stonecutter=" + interact_with_stonecutter +
-                ", bell_ring=" + bell_ring +
-                ", raid_trigger=" + raid_trigger +
-                ", raid_win=" + raid_win +
-                ", interact_with_anvil=" + interact_with_anvil +
-                ", interact_with_grindstone=" + interact_with_grindstone +
-                '}';
+               "damage_dealt=" + damage_dealt +
+               ", damage_taken=" + damage_taken +
+               ", deaths=" + deaths +
+               ", mob_kills=" + mob_kills +
+               ", player_kills=" + player_kills +
+               ", fish_caught=" + fish_caught +
+               ", animals_bred=" + animals_bred +
+               ", leave_game=" + leave_game +
+               ", jump=" + jump +
+               ", drop_count=" + drop_count +
+               ", play_one_minute=" + play_one_minute +
+               ", walk_one_cm=" + walk_one_cm +
+               ", walk_on_water_one_cm=" + walk_on_water_one_cm +
+               ", fall_one_cm=" + fall_one_cm +
+               ", sneak_time=" + sneak_time +
+               ", climb_one_cm=" + climb_one_cm +
+               ", fly_one_cm=" + fly_one_cm +
+               ", walk_under_water_one_cm=" + walk_under_water_one_cm +
+               ", minecart_one_cm=" + minecart_one_cm +
+               ", boat_one_cm=" + boat_one_cm +
+               ", pig_one_cm=" + pig_one_cm +
+               ", horse_one_cm=" + horse_one_cm +
+               ", sprint_one_cm=" + sprint_one_cm +
+               ", crouch_one_cm=" + crouch_one_cm +
+               ", aviate_one_cm=" + aviate_one_cm +
+               ", time_since_death=" + time_since_death +
+               ", talked_to_villager=" + talked_to_villager +
+               ", traded_with_villager=" + traded_with_villager +
+               ", cake_slices_eaten=" + cake_slices_eaten +
+               ", cauldron_filled=" + cauldron_filled +
+               ", cauldron_used=" + cauldron_used +
+               ", armor_cleaned=" + armor_cleaned +
+               ", banner_cleaned=" + banner_cleaned +
+               ", brewingstand_interaction=" + brewingstand_interaction +
+               ", beacon_interaction=" + beacon_interaction +
+               ", dropper_inspected=" + dropper_inspected +
+               ", hopper_inspected=" + hopper_inspected +
+               ", dispenser_inspected=" + dispenser_inspected +
+               ", noteblock_played=" + noteblock_played +
+               ", noteblock_tuned=" + noteblock_tuned +
+               ", flower_potted=" + flower_potted +
+               ", trapped_chest_triggered=" + trapped_chest_triggered +
+               ", enderchest_opened=" + enderchest_opened +
+               ", item_enchanted=" + item_enchanted +
+               ", record_played=" + record_played +
+               ", furnace_interaction=" + furnace_interaction +
+               ", crafting_table_interaction=" + crafting_table_interaction +
+               ", chest_opened=" + chest_opened +
+               ", sleep_in_bed=" + sleep_in_bed +
+               ", shulker_box_opened=" + shulker_box_opened +
+               ", time_since_rest=" + time_since_rest +
+               ", swim_one_cm=" + swim_one_cm +
+               ", damage_dealt_absorbed=" + damage_dealt_absorbed +
+               ", damage_dealt_resisted=" + damage_dealt_resisted +
+               ", damage_blocked_by_shield=" + damage_blocked_by_shield +
+               ", damage_absorbed=" + damage_absorbed +
+               ", damage_resisted=" + damage_resisted +
+               ", clean_shulker_box=" + clean_shulker_box +
+               ", open_barrel=" + open_barrel +
+               ", interact_with_blast_furnace=" + interact_with_blast_furnace +
+               ", interact_with_smoker=" + interact_with_smoker +
+               ", interact_with_lectern=" + interact_with_lectern +
+               ", interact_with_campfire=" + interact_with_campfire +
+               ", interact_with_cartography_table=" + interact_with_cartography_table +
+               ", interact_with_loom=" + interact_with_loom +
+               ", interact_with_stonecutter=" + interact_with_stonecutter +
+               ", bell_ring=" + bell_ring +
+               ", raid_trigger=" + raid_trigger +
+               ", raid_win=" + raid_win +
+               ", interact_with_anvil=" + interact_with_anvil +
+               ", interact_with_grindstone=" + interact_with_grindstone +
+               '}';
     }
 
     public void checkForNulls() {

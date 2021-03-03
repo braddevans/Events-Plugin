@@ -1,5 +1,6 @@
 package uk.co.breadhub.events.entities;
 
+import org.bukkit.configuration.ConfigurationSection;
 import uk.co.breadhub.events.Main;
 
 import java.util.ArrayList;
@@ -7,14 +8,15 @@ import java.util.List;
 
 public class Event {
 
-    private static List<String> commandsOnCompletion = new ArrayList<>();
+    private static ConfigurationSection config;
     public static long starttime;
     public static int id;
     public static String name;
+    public static String description;
     public static boolean canExpire;
     public static long expireTime;
     public static boolean active;
-
+    private static List<String> commandsOnCompletion = new ArrayList<>();
 
     public Event(int ID, String Name, long startTime, boolean canExpire, long expireTime, List<String> commands, boolean active) {
         Event.id = ID;
@@ -26,23 +28,34 @@ public class Event {
         Event.active = active;
     }
 
-    public Event(int ID, String Name, boolean active) {
+    public Event(int ID, String Name, boolean active, ConfigurationSection section) {
         Event.id = ID;
         Event.name = Name;
         Event.starttime = 0;
         Event.canExpire = false;
         Event.expireTime = 0;
         Event.active = active;
+        Event.config = section;
     }
 
-    public Event(int ID, String Name, List<String> commands, boolean active) {
+    public Event(int ID, String Name, String discription, List<String> runCommands, boolean active, ConfigurationSection section) {
         Event.id = ID;
         Event.name = Name;
+        Event.description = discription;
         Event.starttime = 0;
         Event.canExpire = false;
-        Event.commandsOnCompletion = commands;
+        Event.commandsOnCompletion = runCommands;
         Event.expireTime = 0;
         Event.active = active;
+        Event.config = section;
+    }
+
+    public static List<String> getCommandsOnCompletion() {
+        return commandsOnCompletion;
+    }
+
+    public static void setCommandsOnCompletion(List<String> commandsOnCompletion) {
+        Event.commandsOnCompletion = commandsOnCompletion;
     }
 
     public int getId() {
@@ -93,12 +106,12 @@ public class Event {
         Event.active = active;
     }
 
-    public static List<String> getCommandsOnCompletion() {
-        return commandsOnCompletion;
+    public static String getDescription() {
+        return description;
     }
 
-    public static void setCommandsOnCompletion(List<String> commandsOnCompletion) {
-        Event.commandsOnCompletion = commandsOnCompletion;
+    public static void setDescription(String description) {
+        Event.description = description;
     }
 
     public void register() {

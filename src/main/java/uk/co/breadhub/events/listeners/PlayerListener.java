@@ -7,7 +7,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import uk.co.breadhub.events.Main;
 import uk.co.breadhub.events.entities.Statistics;
-import uk.co.breadhub.events.utils.MiscUtils;
 
 public class PlayerListener implements Listener {
 
@@ -19,15 +18,12 @@ public class PlayerListener implements Listener {
         stats.checkForNulls();
         Main.getInstance().playerStats.put(player, stats);
         System.out.println(Main.getInstance().playerStats.get(player).toString());
-        //MiscUtils.createScoreboardForPlayer(player);
-        MiscUtils.createOnlinePlayersScoreboard(player);
     }
 
     @EventHandler
     public void onPlayerDisconnect(PlayerQuitEvent event) {
         Player player = event.getPlayer();
         // remove players from scoreboard to save on memory
-        Main.getInstance().boards.remove(player);
         Main.getInstance().playerStats.remove(player);
     }
 }

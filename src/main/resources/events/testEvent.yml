@@ -1,0 +1,7 @@
+# all of these options are required by default
+testEvent:
+  discription: ""
+  active: true
+  runCommands:
+    - "say OOF"
+    - "say OWO"
